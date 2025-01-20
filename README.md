@@ -40,10 +40,9 @@ Getting Started
 
 Clone the Repository:
 
+If you need to clone the repository, you can use the following link
 git clone https://github.com/Zro2HiroCode/api-flask-mysql.git
 cd api-flask-mysql
-
-If you need to clone the repository, you can use the following link: https://github.com/Zro2HiroCode/api-flask-mysql
 
 Set Up a Virtual Environment:
 
