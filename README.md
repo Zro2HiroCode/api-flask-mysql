@@ -6,105 +6,98 @@ Created by Zro2HiroCode.
 
 โค้ดชุดนี้ถูกเก็บไว้สำหรับการทบทวนและการเรียนรู้ หวังว่าจะเป็นประโยชน์แก่ทุกคน ไม่ว่าจะเป็นผู้เริ่มต้นหรือผู้เชี่ยวชาญ ถ้ามีคำถามหรือต้องการความช่วยเหลือ กรุณาติดต่อผมที่ saengsaichaiyo@gmail.com
 
-Features
+คุณลักษณะ
 
-Create: Add new records to the database.
+Create: สร้าง: เพิ่มรายการใหม่ในฐานข้อมูล
 
-Read: Retrieve existing records from the database.
+Read: ดึงข้อมูลรายการที่มีอยู่ในฐานข้อมูล
 
-Update: Modify existing records in the database.
+Update: แก้ไขรายการที่มีอยู่ในฐานข้อมูล
 
-Delete: Remove records from the database.
+Delete: ลบรายการออกจากฐานข้อมูล
 
-Authentication: Secure endpoints with user authentication.
+Authentication: ปกป้องเส้นทางด้วยการรับรองความถูกต้องของผู้ใช้
 
-Validation: Ensure data integrity with input validation.
+Validation: รับประกันความถูกต้องของข้อมูลด้วยการตรวจสอบข้อมูล
 
-Error Handling: Provide meaningful error messages for debugging and user feedback.
+Error Handling: ให้ข้อความข้อผิดพลาดที่มีความหมายสำหรับการดีบักและฟีดแบ็กผู้ใช้
 
-Technologies Used
+ให้ข้อความข้อผิดพลาดที่มีความหมายสำหรับการดีบักและฟีดแบ็กผู้ใช้
 
-Python: The programming language used for building the API.
+เทคโนโลยีที่ใช้
 
-Flask: A lightweight web framework for Python.
+Python: ภาษาโปรแกรมที่ใช้ในการสร้าง API
 
-MySQL: A popular relational database management system.
+Flask: เฟรมเวิร์กเว็บแบบเบาสำหรับ Python
 
-SQLAlchemy: An SQL toolkit and Object-Relational Mapping (ORM) library for Python.
+MySQL: ระบบจัดการฐานข้อมูลเชิงสัมพันธ์ที่นิยม
 
-Flask-RESTful: An extension for Flask that adds support for quickly building REST APIs.
+SQLAlchemy: ชุดเครื่องมือ SQL และไลบรารี ORM สำหรับ Python
 
-Flask-JWT-Extended: An extension for Flask that adds JSON Web Token (JWT) support for securing endpoints.
+Flask-RESTful: ส่วนขยายสำหรับ Flask ที่เพิ่มการสนับสนุนในการสร้าง REST API อย่างรวดเร็ว
 
-Getting Started
+Flask-JWT-Extended: ส่วนขยายสำหรับ Flask ที่เพิ่มการสนับสนุน JSON Web Token (JWT) สำหรับการปกป้องเส้นทาง
 
-Clone the Repository:
 
-If you need to clone the repository, you can use the following link
+
+เริ่มต้น
+
+1. โคลน Repository:
+
+ถ้าคุณต้องการโคลน Repository คุณสามารถใช้ลิงค์ต่อไปนี้:
 git clone https://github.com/Zro2HiroCode/api-flask-mysql.git
 cd api-flask-mysql
 
-Set Up a Virtual Environment:
+2. ตั้งค่าสภาพแวดล้อมเสมือน:
 
-python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   python -m venv venv
+   source venv/bin/activate  # บน Windows ใช้ `venv\Scripts\activate`
 
-Install Dependencies:
+3. ติดตั้งความต้องการ:
 
-pip install -r requirements.txt
+   pip install -r requirements.txt
 
-Configure the Database:
+4. กำหนดค่าฐานข้อมูล:
 
-Create a MySQL database and user.
+   - สร้างฐานข้อมูล MySQL และผู้ใช้
+   - อัปเดตการกำหนดค่าฐานข้อมูลใน `config.py`
 
-Update the database configuration in config.py.
+5. ทำงานแอปพลิเคชัน:
 
-Run the Application:
+   flask run
 
-flask run
+6. เข้าถึง API:
 
-Access the API:
+   - API จะพร้อมใช้งานที่ `http://127.0.0.1:5000`
+   - ใช้เครื่องมือเช่น Postman หรือ cURL เพื่อโต้ตอบกับเส้นทาง API
 
-The API will be available at http://127.0.0.1:5000.
+ เส้นทาง
 
-Use tools like Postman or cURL to interact with the API endpoints.
+- POST /api/items**: สร้างรายการใหม่
+- GET /api/items**: ดึงข้อมูลรายการทั้งหมด
+- GET /api/items/<id>**: ดึงข้อมูลรายการเฉพาะด้วย ID
+- PUT /api/items/<id>**: อัปเดตรายการเฉพาะด้วย ID
+- DELETE /api/items/<id>**: ลบรายการเฉพาะด้วย ID
 
-Endpoints
+ การรับรองความถูกต้อง
 
-POST /api/items: Create a new item.
+- POST /api/auth/login**: เข้าสู่ระบบและรับโทเค็น JWT
+- POST /api/auth/register**: ลงทะเบียนผู้ใช้ใหม่
 
-GET /api/items: Retrieve all items.
+ การมีส่วนร่วม
 
-GET /api/items/<id>: Retrieve a specific item by ID.
+การมีส่วนร่วมเป็นที่ต้อนรับ! กรุณาปฏิบัติตามขั้นตอนเหล่านี้:
 
-PUT /api/items/<id>: Update a specific item by ID.
+1. Fork รีพอสิทอรี
+2. สร้างสาขาใหม่สำหรับฟีเจอร์หรือการแก้ไขบัค
+3. ทำการเปลี่ยนแปลงและคอมมิตด้วยข้อความที่มีความหมาย
+4. พุชสาขาของคุณไปยังฟอร์ก
+5. สร้างขอเปิดการดึง
 
-DELETE /api/items/<id>: Delete a specific item by ID.
+ ใบอนุญาต
 
-Authentication
+โครงการนี้ได้รับใบอนุญาตภายใต้ใบอนุญาต MIT ดูไฟล์ [LICENSE](LICENSE) สำหรับรายละเอียดเพิ่มเติม
 
-POST /api/auth/login: Log in and obtain a JWT token.
+ ติดต่อ
 
-POST /api/auth/register: Register a new user.
-
-Contributing
-
-Contributions are welcome! Please follow these steps:
-
-Fork the repository.
-
-Create a new branch for your feature or bug fix.
-
-Make your changes and commit them with descriptive messages.
-
-Push your branch to your fork.
-
-Create a pull request.
-
-License
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
-
-Contact
-
-For any questions or support, please contact saengsaichaiyo@gmail.com.
+สำหรับคำถามหรือการสนับสนุน กรุณาติดต่อ: saengsaichaiyo@gmail.com.
